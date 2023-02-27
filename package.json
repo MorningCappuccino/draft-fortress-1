@@ -1,0 +1,19 @@
+{
+  "name": "draft-fortress-1",
+  "version": "1.0.0",
+  "description": "Firts project of Draft Fortress Team",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MorningCappuccino/draft-fortress-1.git"
+  },
+  "author": "MorningCappuccino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MorningCappuccino/draft-fortress-1/issues"
+  },
+  "homepage": "https://github.com/MorningCappuccino/draft-fortress-1#readme"
+}
