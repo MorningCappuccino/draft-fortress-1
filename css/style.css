@@ -1,0 +1,176 @@
+
+html, body {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+}
+.wraper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #FF4656;
+}
+.container {
+    max-width: 1386px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.content__background {
+    padding-top: 106px;
+    background: url(/img/background.png);
+    flex: 1 1 auto;
+}
+.content__dashed {
+    max-height: 698px;
+    border-top: 1px dashed #2B2A29;
+    border-bottom: 1px dashed #2B2A29;
+    margin-bottom: 43px;
+}
+.content__black {
+    margin: 60px 0px;
+    background: #1F2326;
+    max-width: 1386px;
+    height: 578px;
+}
+.swiper {
+    height: 100%;
+}
+.swiper-slide {
+    padding: 0 15px;
+}
+.swiper__text {
+    font-family: 'Montserrat';
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    padding-top: 20%;
+    text-align: center;
+}
+.swiper__sub-title {
+    font-family: 'Acme', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #FF4656;
+    padding-top: 95px;
+    padding-left: 65%;
+}
+.swiper .swiper-button-prev{
+    top: 520px;
+    left: 39%;
+    color: #FFFFFF;
+}
+.swiper .swiper-button-next {
+    top: 520px;
+    right: 39%;
+    color: #FFFFFF;
+}
+.swiper .swiper-pagination {
+    width: 10px;
+    height: 58px;
+    color: #FFFFFF;
+}
+.swiper .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    font-size: 14px;
+    background-color: #FF4656;
+}
+/*---------review----------*/
+.review {
+    margin-bottom: 20px;
+}
+.review__body {
+    display: flex;
+}
+.review__one {
+    flex: 0 1 45%;
+}
+.review__one-input {
+    width: 84%;
+    height: 144px;
+    background: #FFFFFF;
+    border: 2px solid #1F2326;
+    padding: 10px 0 0 15px;
+    margin-left: 95px;
+}
+.review__two {
+    flex: 0 1 55%;
+}
+.two-block {
+    display: flex;
+    flex-direction: column;
+}
+.review__two-input {
+    width: 55%;
+    height: 50px;
+    background: #FFFFFF;
+    border: 2px solid #1F2326;
+    margin-left: 90px;
+    padding: 2px 0 0 15px;
+}
+.button-post {
+    width: 28%;
+    height: 50px;
+    background: #383E3A;
+    font-family: 'Acme', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.1em;
+    color: #FFFFFF;
+    margin-top: 44px;
+    margin-left: 39%;
+}
+.button-post:hover {
+        background: #614c4f;
+    }
+@media (max-width: 767.98px) {
+    .review__body {
+        flex-wrap: wrap;
+    }
+    .review__one-input {
+        min-width: 330px;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .review__two-input {
+        min-width: 330px;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+    .button-post {
+        margin-top: 0;
+        margin-left: 0;
+        width: 172px;
+    }
+    .swiper .swiper-pagination-bullet {
+        display: none;
+    }
+    .swiper .swiper-button-prev{
+        top: 170px;
+        left: 0;
+    }
+    .swiper .swiper-button-next  {
+        top: 170px;
+        right: 0;
+    }
+    .swiper__text {
+        font-size: 18px;
+        line-height: 24px;
+        
+    }
+    .swiper__sub-title {
+        font-size: 16px;
+        line-height: 19px;
+        padding-bottom: 28px;
+    }
+    .content__black {
+        height: 100%;
+    }
+}
+ гит инит
