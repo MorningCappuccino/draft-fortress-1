@@ -3,17 +3,18 @@ import {
   Controller,
   Delete,
   Get,
-  HttpCode,
   HttpStatus,
   Param,
   Post,
   Put,
+  UseGuards,
 } from '@nestjs/common';
 import { CreateEntityDto } from './dto/create.entity.dto';
 import { UpdateEntityDto } from './dto/update.entity.dto';
 import { EntityService } from './entity.service';
 import { Entity } from './schemas/entity.schema';
 import { ApiResponse, ApiTags } from '@nestjs/swagger';
+import { EntityGuard } from './entity.guard';
 
 const { OK, CREATED } = HttpStatus;
 
@@ -29,8 +30,7 @@ export class EntityController {
     isArray: true,
   })
   @Get()
-  @HttpCode(OK)
-  getAll(): Promise<Entity[]> {
+  async getAll(): Promise<Entity[]> {
     return this.entityService.getAll();
   }
 
@@ -41,7 +41,6 @@ export class EntityController {
     isArray: false,
   })
   @Get(':id')
-  @HttpCode(OK)
   getOne(@Param('id') id: string): Promise<Entity> {
     return this.entityService.getById(id);
   }
@@ -53,7 +52,7 @@ export class EntityController {
     type: CreateEntityDto,
     isArray: false,
   })
-  @HttpCode(CREATED)
+  @UseGuards(new EntityGuard())
   create(@Body() createEntityDto: CreateEntityDto): Promise<Entity> {
     return this.entityService.create(createEntityDto);
   }
@@ -65,7 +64,6 @@ export class EntityController {
     type: UpdateEntityDto,
     isArray: false,
   })
-  @HttpCode(OK)
   remove(@Param('id') id: string): Promise<Entity> {
     return this.entityService.remove(id);
   }
@@ -73,11 +71,12 @@ export class EntityController {
   @Put(':id')
   @ApiResponse({
     status: OK,
-    description: 'Updated Copy Object Created',
+    description:
+      'Updated Copy Object Created (создает новый объект на основе старого)',
     type: UpdateEntityDto,
     isArray: false,
   })
-  @HttpCode(OK)
+  @UseGuards(new EntityGuard())
   update(
     @Body() updateEntityDto: UpdateEntityDto,
     @Param('id') id: string,
