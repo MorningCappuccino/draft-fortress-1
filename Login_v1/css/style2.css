@@ -1,0 +1,113 @@
+@font-face {
+    font-family: 'Druk Wide Trial';
+    font-display: swap;
+    src: url("..fonts/Druk_Collection/DrukWide-Medium-Trial.otf");
+    src: local("O"), url("fonts/Druk_Collection/DrukWide-Medium-Trial.otf") format("otf"), 
+    
+}
+html, body {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+}
+.wraper {
+    min-height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #FF4656;
+    box-sizing: border-box;
+}
+[class*="__container"] {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+.content__background {
+    background: url(../../img/background.png);
+    flex: 1 1 auto;
+}
+.header {
+    background: #111111;
+}
+.header__container {
+    display: flex;
+    height: 80px;
+    align-items: center;
+}
+.header__menu {
+    padding-right: 15px;
+}
+.header__logo {
+    padding-right: 20px;
+}
+.menu__list {
+    display: flex;
+    column-gap: 40px;
+}
+.menu__item:hover {
+    background: #373E43;
+    border-radius: 5px;
+    padding: 0 7px;
+}
+.menu__link {
+    font-family: 'Inter';
+    font-weight: 500;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+a:hover {
+    text-decoration: underline #FF4656;
+    
+}
+.header__button {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: end;
+}
+.button_login {
+    background: linear-gradient(93.49deg, #FF4F46 0%, #FF7D66 100%);
+    border-radius: 12px;
+    width: 112px;
+    height: 32px;
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #111111;
+}
+.button_login:hover {
+    background: linear-gradient(93.49deg, #ee3c33 0%, #e46852 100%);
+}
+@media(max-width: 991.98px) {
+    .menu__list {
+        flex-wrap: wrap;
+        justify-content: center;
+ 
+    }
+    .menu__link {
+        font-size: 15px;
+        line-height: 0.62%;
+    }
+}
+@media(max-width: 767.98px) {
+    .header__logo {
+        padding-right: 0;
+    }
+    .header__logo img {
+       width: 100%;
+    }
+    .button_login {
+        font-size: 14px;
+        width: 90px;
+    }
+}
+@media(max-width: 479.98px) {
+    .button_login {
+        width: 80px;
+    }
+}

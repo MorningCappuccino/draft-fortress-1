@@ -1,11 +1,10 @@
 @font-face {
     font-family: 'Druk Wide Trial';
     font-display: swap;
-    src: url("fonts/Druk_CollectionDrukWide-Medium-Trial.otf");
-    src: local("O"), url("../fonts/DrukWide-Medium-Trial.otf") format("otf"), 
+    src: url("..fonts/Druk_Collection/DrukWide-Medium-Trial.otf");
+    src: local("O"), url("fonts/Druk_Collection/DrukWide-Medium-Trial.otf") format("otf"), 
     
 }
-
 html, body {
     font-family: 'Montserrat';
     font-style: normal;
@@ -40,8 +39,6 @@ html, body {
     background-size: 30px 2px;
     background-repeat: repeat-x;
     padding-top: 1px;
-
-    
 }
  
 .content__black {
@@ -114,7 +111,9 @@ html, body {
     width: 82%;
     height: 144px;
     background: #FFFFFF;
-    padding-left: 15px;
+    padding-top: 29px;
+    padding-left: 27px;
+    color: #000000;
     margin-left: 62px;
     font-weight: 500;
     font-size: 22px;

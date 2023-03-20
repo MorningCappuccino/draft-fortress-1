@@ -47,25 +47,33 @@
                 </div>
                 <div class="review">
                     <div class="container">
-                        <div class="review__body">
-                            <div class="review__one">
-                                <input type="text" class="review__one-input" placeholder="Type you review...">
-                            </div>
-                            <div class="review__two two-block">
-                                <div class="two-block">  
-                                    <input type="text" class="review__two-input" placeholder="Signature..." >
-                                    <button type="button" class="button-post">
-                                         Post
-                                    </button>
+                        <form class="form-data" method="post" action="https://jsonplaceholder.typicode.com/users">
+                            <div class="review__body">
+                                <div class="review__one">
+                                    <label for="reviewServer"></label>
+                                    <textarea type="text" class="review__one-input" name="user_review" id="inputServer"  placeholder="Type you review..." value=""></textarea>
                                 </div>
+                                <div class="review__two two-block">
+                                    <div class="two-block">  
+                                        <label for="signatureServer"></label>
+                                        <input type="text" class="review__two-input" name="user_signature" id="signatureServer" placeholder="Signature..."  >
+                                        <button type="submit" class="button-post">
+                                            Post
+                                        </button>
+                                    </div>
+                                </div> 
                             </div> 
-                        </div> 
+                        </form>
                     </div>   
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script>
+     
+        </script>
     </body>
 </html>
 
