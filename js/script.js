@@ -12,65 +12,30 @@ new Swiper('.swiper', {
     },
 });
 
-(async () => {
-    let user = {
-      name: 'John',
-      surname: 'Smith'
-    };
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
+  form.addEventListener('submit', sendData);
+
+  async function sendData(e) {
+    e.preventDefault();
+
+  }
     
-    let response = await fetch('https://jsonplaceholder.typicode.com/users', {
+})
+
+  const formBody = document.querySelector('.form-body');
+
+  const sendData = async(url, data) => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json;charset=utf-8'
+        'Content-Type': 'application/json'
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify(formBody),
     });
-        if (!response.ok) {
-            throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response}`);
-        } 
-        return await response.json();
     
-    let result = await response.json();
-    alert(result.message);
-    })()
-//'https://jsonplaceholder.typicode.com/users'
+    return  response.json();
+  };
 
-// fetch('http://localhost:3000/entity')
-// .then(data => {
-//         console.log(data);
-//         return data.text();
-// })
-// .then(data => {
-//     console.log(data);
-// });
+sendData();
 
-// fetch('http://localhost:3000/entity', {
-//     method: 'POST', 
-//     headers: {
-//         'Content-Type': 'application/x-www-form-urlencoded',
-
-//     },
-//     body: 'hello',
-// })
-//     .then(response => response.text())
-//     .then(response => {
-//         console.log(response);
-//     })
-
-// // const response = await fetch(url, {
-// //     method: 'POST',
-// //     body: database,
-// // });
-// //     if (!response.ok) {
-// //         throw new Error(`Ошибка по адресу ${url}, статус ошибки ${response}`);
-
-// //     }
-// //     return await response.json();
-
-// //     const form = () => {
-// //     const formData = document.querySelector('.form-data');
-        
-// //         const data = {
-            
-// //         }
-// //     }
