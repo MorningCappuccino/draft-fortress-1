@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Blender-Pro";
+    src: url('./fonts/Blender-Pro-Bold.woff2') format("woff2");
+  
+}
+
+* {
+    background-color: rgb(0, 0, 0);
+    box-sizing: border-box;
+  }
+
+ 
+
+
+.container {
+    
+    max-width: 138px;
+    max-height: 50px;
+    margin: 60px 0 3px 100px; 
+    margin-bottom: 46px;    
+}
+
+.text__review {
+    font-family: 'Blender-Pro';
+    font-weight: 700;
+    font-size: 35px;
+    color: #F8EF00;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+
+/* MAIN */
+.block__reviews {
+    max-width: 867px;
+    height: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+    overflow-x:hidden;
+    margin-bottom: 112px;
+    
+}
+
+.review__card {
+    max-width: 400px;
+    /* height: 200px; */
+    border: 1px solid #979797;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    color: #fff;
+    
+   
+}
+
+.review__card:nth-child(odd) {
+    margin-left: 0;
+}
+
+.review__header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+img {
+    padding-left: 30px;
+    padding-top: 36px;
+    margin: 0;
+
+}
+h2 {
+    padding-top: 17px;
+    margin: 0;
+    padding-right: 29px;
+    font-family: "Blender-Pro";
+    font-size: 26px;
+    
+}
+
+p {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 19px;
+    margin: 0;
+    padding-top: 40px;
+    font-family: "Blender-Pro";
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 17px;
+}
+
+/* FOOTER */
+
+ .wpapper {
+    max-width: 867px;
+    margin: 0 auto;
+     display: flex;
+     flex-wrap: wrap;
+ }
+
+ .card__textarea {
+    max-width: 400px;
+    height: 150px;
+    margin-right: 137px;
+ }
+ textarea {
+    font-family: 'Blender Pro';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #00F0FF;
+    width: 400px;
+    height: 150px;
+    border-width: 1px 1px 2px 1px;
+    border-style: solid;
+    border-color: #00F0FF;
+    padding-left: 13px;
+    padding-top: 10px;
+    }
+
+    .card__wpapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 330px;
+        height: 150px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column; 
+    }
+
+    .contacts__input {
+        border: none;
+        border-bottom: 2px solid #00F0FF;
+        width: 330px;
+        margin-bottom: 50px;
+        outline: none;
+        color: #fff;
+    }
+    
+    .contacts__input::placeholder {
+        font-family: 'Blender Pro';
+        font-style: normal;
+        font-weight: 700;
+        width: 107px;
+        height: 22px;
+        color: #00F0FF;
+        letter-spacing: 0.1em;
+       font-size: 18px;
+       line-height: 22px;
+       
+    }
+
+    .contacts__btn {   
+        align-self: flex-end;
+        width: 267px;
+        height: 62px;
+        color: #00F0FF;
+        border: none;
+        font-family: 'Blender Pro';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        /* padding: 16px 76px;  */
+        background: url(/img/Vector\ submit.png) center no-repeat;
+    }   
+   
+   
+
+
+
