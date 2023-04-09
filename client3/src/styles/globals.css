@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
+  Adding font face
+*/
+
+@layer base {
+  @font-face {
+    font-family: Blender-Pro;
+    font-weight: bold;
+    font-style: normal;
+    src: url("/fonts/BlenderPro-Bold.woff2") format("woff2");
+  }
+
+  #cyberpunk-2077 {
+    font-family: Blender-Pro;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
