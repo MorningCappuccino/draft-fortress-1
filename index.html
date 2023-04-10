@@ -47,31 +47,27 @@
                 </div>
                 <div class="review">
                     <div class="container">
-                        <form action='https://jsonplaceholder.typicode.com/posts' id="form" class="form-body" method="post" >
+                        <form id="form"  method="post">
                             <div class="review__body">
                                 <div class="review__one">
-                                    <textarea type="text" class="review__one-input" name="review" id="formReview"  placeholder="Type you review..." ></textarea>
+                                    <input type="text" class="review__one-input" name="title" placeholder="Type you review...">
                                 </div>
                                 <div class="review__two two-block">
                                     <div class="two-block">  
-                                        <input type="text" class="review__two-input" name="signature" id="formSignature" placeholder="Signature..."  >
-                                        <button type="submit" class="button-post">
+                                        <input type="text" name="description" class="review__two-input" placeholder="Signature..." >
+                                        <button type="submit" class="button-post" id="button-post">
                                             Post
                                         </button>
                                     </div>
                                 </div> 
                             </div> 
-                        </form>
+                        </form>    
                     </div>   
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script>
-     
-        </script>
     </body>
 </html>
 

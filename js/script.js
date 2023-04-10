@@ -1,3 +1,4 @@
+'use strict'
 new Swiper('.swiper', {
 
     navigation: {
@@ -14,28 +15,38 @@ new Swiper('.swiper', {
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
-  form.addEventListener('submit', sendData);
+  form.addEventListener('submit', formSend);
 
-  async function sendData(e) {
+  async function formSend(e) {
     e.preventDefault();
 
+    let formData = new FormData(form);
+   
+    const dataToSend = {
+      title :  formData.get('title'),
+      description : formData.get('description'),
+    }
+    console.log(dataToSend);
+    
+      let response = await fetch('http://localhost:3000/entity', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify( dataToSend)
+      });
+      if (response.ok) {
+        let result = await response.json();
+      }
+      
+    }
+    
   }
-    
-})
+);
 
-  const formBody = document.querySelector('.form-body');
-
-  const sendData = async(url, data) => {
-    const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formBody),
-    });
-    
-    return  response.json();
-  };
-
-sendData();
+ fetch('http://localhost:3000/entity').then((res)=> {
+  (res.json().then((res)))
+  
+ })
+ 
 
