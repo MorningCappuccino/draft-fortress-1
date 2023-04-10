@@ -41,16 +41,22 @@ html, body {
     padding-right: 15px;
 }
 .header__logo {
-    padding-right: 20px;
+    padding-right: 50px;
+}
+.header__logo img {
+    padding-left: 8px;
 }
 .menu__list {
     display: flex;
     column-gap: 40px;
+
+}
+.menu__item {
+    padding-top: 20px;
+    height: 58px;
 }
 .menu__item:hover {
-    background: #373E43;
-    border-radius: 5px;
-    padding: 0 7px;
+    border-bottom:  4px solid #FF4656;
 }
 .menu__link {
     font-family: 'Inter';
@@ -58,11 +64,15 @@ html, body {
     text-align: justify;
     text-transform: uppercase;
     color: #FFFFFF;
+    height: 40px;
 }
-a:hover {
-    text-decoration: underline #FF4656;
-    
+.menu__link:hover {
+    background: #373E43;
+    border-radius: 5px;
+    padding: 0 7px;
+   
 }
+
 .header__button {
     flex: 1 1 auto;
     display: flex;
@@ -110,4 +120,92 @@ a:hover {
     .button_login {
         width: 80px;
     }
+}
+/*-----------------login----------*/
+.login__block {
+    width: 400px;
+    height: 440px;
+    background: rgba(217, 217, 217, 0.34);
+    border: 3px solid #1F2326;
+    margin: 0 auto;
+    margin-top: 212px;
+    margin-bottom: 300px;
+}
+.login__title {
+    font-family: 'Druk Wide Trial';
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+    padding: 50px 0 30px 0;
+}
+.login__input {
+    display: flex;
+    flex-direction: column;
+}
+.input__email {
+    background: #FFFFFF;
+    border: 2px solid #1F2326;
+    width: 340px;
+    height: 50px;
+    margin: 0px auto 30px;
+    padding-left: 18px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.input__password {
+    background: #FFFFFF;
+    border: 2px solid #1F2326;
+    width: 340px;
+    height: 50px;
+    margin-bottom: 25px;
+    margin: 0px auto 25px;
+    color: #000000;
+    padding-left: 18px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+.login__choice {
+    font-size: 14px;
+    line-height: 17px;
+    padding: 0 20px 25px 30px;
+    letter-spacing: 0em;
+}
+.login__checkbox {
+    padding-right: 7px;
+}
+.login__remember {
+    padding-right: 87px;
+}
+.login__button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+.button__dark {
+    background: #383E3A;
+    width: 340px;
+    height: 50px;
+    font-family: 'Druk Wide Trial';
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+.button__dark:hover {
+    background: #614c4f;
+}
+.login__account {
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: 0em;
+}
+.login__register {
+    font-weight: 600;
 }
