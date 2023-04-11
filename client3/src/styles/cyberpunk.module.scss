@@ -1,15 +1,11 @@
 // :export {
 
-$cyber-yellow: rgb(248, 239, 0);
-
 .cyber {
     &__wrap {
         max-width: 1260px;
     }
 
     &__reviews {
-        max-width: 867px;
-        
         &::-webkit-scrollbar {
             display: visible;
             -webkit-appearance: none;
@@ -25,8 +21,8 @@ $cyber-yellow: rgb(248, 239, 0);
 
     &__hreview {
         font-size: 42px;
-        color: $cyber-yellow;
         position: relative;
+        text-transform: uppercase;
 
         &::after {
             content: '';

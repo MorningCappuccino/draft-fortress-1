@@ -13,11 +13,19 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'button': 'url(/button-bg.svg)',
       },
       fontFamily: {
         'sans': ['Blender-Pro', ...defaultTheme.fontFamily.sans],
       }
     },
+    colors: {
+        'yellow': 'rgb(248, 239, 0)',
+        'gray': '#979797',
+        'white': '#fff',
+        'black': '#000',
+        'aqua': '#00F0FF'
+    }
   },
   plugins: [],
 }

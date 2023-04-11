@@ -2,6 +2,7 @@ import CyberCard from "@/components/cyber_card";
 import { Inter } from "next/font/google";
 
 import styles from "@/styles/cyberpunk.module.scss";
+import CyberAddReview from "@/components/cyber_add-review";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,16 @@ export default function Home() {
       {/* Cyberpunk 2077 */}
       <div id="cyberpunk-2077">
         <div className={styles.cyber__wrap + " mx-auto pt-14"}>
-          <h2 className={styles.cyber__hreview + " pb-8"}>REVIEW</h2>
-          <div className={styles.cyber__reviews + " flex flex-wrap overflow-y-scroll mx-auto"} style={{height: 550}}>
-            <CyberCard author={author} review={review} />
-            <CyberCard author={author} review={review} />
-            <CyberCard author={author} review={review} />
-            <CyberCard author={author} review={review} />
-            <CyberCard author={author} review={review} />
+          <h2 className={styles.cyber__hreview + " pb-8 text-yellow"}>Review</h2>
+          <div className="mx-auto" style={{maxWidth: 867}}>
+            <div className={styles.cyber__reviews + " flex flex-wrap overflow-y-scroll"} style={{height: 550}}>
+              <CyberCard author={author} review={review} />
+              <CyberCard author={author} review={review} />
+              <CyberCard author={author} review={review} />
+              <CyberCard author={author} review={review} />
+              <CyberCard author={author} review={review} />
+            </div>
+            <CyberAddReview />
           </div>
         </div>
       </div>
