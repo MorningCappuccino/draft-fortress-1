@@ -1,0 +1,44 @@
+// :export {
+
+$cyber-yellow: rgb(248, 239, 0);
+
+.cyber {
+    &__wrap {
+        max-width: 1260px;
+    }
+
+    &__reviews {
+        max-width: 867px;
+        
+        &::-webkit-scrollbar {
+            display: visible;
+            -webkit-appearance: none;
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 4px;
+            background-color: rgba(248, 239, 9, 0.5);
+            -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+        }
+    }
+
+    &__hreview {
+        font-size: 42px;
+        color: $cyber-yellow;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 34px;
+            background: url(../../public/header_bottom.svg);
+            display: block;
+            width: 126px;
+            height: 7px;
+
+        }
+    }
+}
+
+// }
