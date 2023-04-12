@@ -7,10 +7,22 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "cd .. && husky install client3/.husky",
+    "prepare": "cd .. && npx husky install client3/.husky",
     "lint2": "eslint . --ext ts --ext tsx --ext js",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write \"**/*.{js,ts,tsx}\""
+  },
+  "husky": {
+    "hooks": {
+       "pre-commit": "lint-staged",
+       "pre-push": "npm run type-check"
+     }
+  },
+  "lint-staged": {
+    "*.@(ts|tsx)": [
+      "npm run lint2",
+      "npm run format"
+    ]
   },
   "dependencies": {
     "@types/node": "18.15.11",
