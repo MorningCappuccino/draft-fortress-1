@@ -15,24 +15,21 @@
                 <div class="content__dashed">
                     <div class="container">
                         <div class="content__black">
-                            <div class="swiper">
+                            <form class="swiper" id="form-swiper" method="get">
                                 <!-- Additional required wrapper -->
                                 <div class="swiper-wrapper">
                                 <!-- Slides -->
                                 <div class="swiper-slide">
-                                    <p class="swiper__text">Target a friendly corpse. After a short delay,
-                                        revive them with full health.</p>
-                                    <p class="swiper__sub-title">South Korea</p>
+                                    <p class="swiper__text" name="description"></p>
+                                    <p class="swiper__sub-title" name="title"></p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <p class="swiper__text">Target a friendly corpse. After a short delay,
-                                        revive them with full health.</p>
-                                    <p class="swiper__sub-title">South Korea</p>
+                                    <p class="swiper__text"></p>
+                                    <p class="swiper__sub-title"></p>
                                 </div>
                                 <div class="swiper-slide">
-                                    <p class="swiper__text">Target a friendly corpse. After a short delay,
-                                        revive them with full health.</p>
-                                    <p class="swiper__sub-title">South Korea</p>
+                                    <p class="swiper__text"></p>
+                                    <p class="swiper__sub-title"></p>
                                 </div>
                                 </div>
                                 <!-- If we need pagination -->
@@ -41,37 +38,33 @@
                                 <!-- If we need navigation buttons -->
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>
-                            </div>
+                            </form>
                         </div>        
                     </div>
                 </div>
                 <div class="review">
                     <div class="container">
-                        <form action='https://jsonplaceholder.typicode.com/posts' id="form" class="form-body" method="post" >
+                        <form id="form"  method="post">
                             <div class="review__body">
                                 <div class="review__one">
-                                    <textarea type="text" class="review__one-input" name="review" id="formReview"  placeholder="Type you review..." ></textarea>
+                                    <input type="text" class="review__one-input" name="title" placeholder="Type you review...">
                                 </div>
                                 <div class="review__two two-block">
                                     <div class="two-block">  
-                                        <input type="text" class="review__two-input" name="signature" id="formSignature" placeholder="Signature..."  >
-                                        <button type="submit" class="button-post">
+                                        <input type="text" name="description" class="review__two-input" placeholder="Signature..." >
+                                        <button type="submit" class="button-post" id="button-post">
                                             Post
                                         </button>
                                     </div>
                                 </div> 
                             </div> 
-                        </form>
+                        </form>    
                     </div>   
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
         <script src="js/script.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-        <script>
-     
-        </script>
     </body>
 </html>
 

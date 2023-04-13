@@ -1,10 +1,12 @@
 @font-face {
     font-family: 'Druk Wide Trial';
     font-display: swap;
-    src: url("..fonts/Druk_Collection/DrukWide-Medium-Trial.otf");
-    src: local("O"), url("fonts/Druk_Collection/DrukWide-Medium-Trial.otf") format("otf"), 
-    
+    src: url("fonts/Druk_CollectionDrukWide-Medium-Trial.otf");
+    src: local("O"), url("../fonts/DrukWide-Medium-Trial.otf") format("otf");
+    font-weight: 500;
+    font-style: normal;
 }
+
 html, body {
     font-family: 'Montserrat';
     font-style: normal;
@@ -32,7 +34,6 @@ html, body {
     background: url(/img/background.png);
     flex: 1 1 auto;
 }
-
 .content__dashed {
     background-image: linear-gradient(to right, #2B2A29 33%, rgba(255,255,255,0) 0%);
     background-position: top;
@@ -40,7 +41,6 @@ html, body {
     background-repeat: repeat-x;
     padding-top: 1px;
 }
- 
 .content__black {
     margin: 60px 0px;
     background: #1F2326;
@@ -97,8 +97,12 @@ html, body {
 }
 /*---------review----------*/
 .review {
-    padding-top: 43px;
     margin-bottom: 20px;
+    background-image: linear-gradient(to right, #2B2A29 33%, rgba(255,255,255,0) 0%);
+    background-position: top;
+    background-size: 30px 2px;
+    background-repeat: repeat-x;
+    padding-top: 1px;
 }
 .review__body {
     display: flex;
@@ -107,21 +111,20 @@ html, body {
     flex: 0 1 45%;
     width: 495px;
 }
+form {
+    margin-top: 43px;
+}
 .review__one-input {
     width: 82%;
     height: 144px;
     background: #FFFFFF;
-    padding-top: 29px;
-    padding-left: 27px;
-    color: #000000;
+    padding-left: 15px;
     margin-left: 62px;
     font-weight: 500;
     font-size: 22px;
     line-height: 27px;
     letter-spacing: 0.1em;
-    resize: vertical;
 }
-textarea[type="text"]::-webkit-input-placeholder { color: #000000; }
 .review__one-input:focus {
     border: 2px solid #1F2326;
 }
@@ -230,9 +233,5 @@ input[type="text"]::-webkit-input-placeholder { color: #000000; }
 @media (max-width: 699px) {
     .button-post {
         margin-right: 158px;
-    }
-    .swiper__sub-title {
-        text-align: end;
-        padding-left: 0;
     }
 }
