@@ -6,6 +6,7 @@ function bs_html() {
         server: {
             baseDir: '.',
         },
+        port: 3001,
         browser: 'default',
         open: true
     })
