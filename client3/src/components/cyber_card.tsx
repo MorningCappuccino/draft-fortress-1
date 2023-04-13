@@ -8,14 +8,15 @@ export default function CyberCard({
   review: string;
 }) {
   return (
-    <div className="flex bg-black text-white mb-5 ml-5" style={{ height: 200 }}>
-      <div className="border border-gray px-6 py-4" style={{ maxWidth: 400 }}>
-        <div className="flex justify-between mb-4">
-          <Image src="/rec.svg" alt="rec" width={54} height={4}></Image>
-          <span className="text-2xl">{author}</span>
-        </div>
-        <div className="text-sm">{review}</div>
+    <div
+      className="bg-black mb-5 ml-5 border border-gray px-6 py-4"
+      style={{ height: 200, flexBasis: "46.54%", maxWidth: 400 }}
+    >
+      <div className="flex justify-between mb-4">
+        <Image src="/rec.svg" alt="rec" width={54} height={4}></Image>
+        <span className="text-2xl">{author}</span>
       </div>
+      <div className="text-sm">{review}</div>
     </div>
   );
 }

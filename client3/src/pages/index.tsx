@@ -1,10 +1,7 @@
 import CyberCard from "@/components/cyber_card";
-import { Inter } from "next/font/google";
-
 import styles from "@/styles/cyberpunk.module.scss";
 import CyberAddReview from "@/components/cyber_add-review";
-
-const inter = Inter({ subsets: ["latin"] });
+import { useReviews } from "@/hooks/hooks";
 
 const author = "Jonh Doe";
 const review = `Say hello to the Edgerunners Update. In celebration of Cyberpunk:
@@ -14,6 +11,8 @@ the anime, as well as a host of new features and content to dig
 into.`;
 
 export default function Home() {
+  const { reviews, isLoading, isError } = useReviews();
+
   return (
     <main>
       {/* Cyberpunk 2077 */}
@@ -23,18 +22,27 @@ export default function Home() {
             Review
           </h2>
           <div className="mx-auto" style={{ maxWidth: 867 }}>
-            <div
-              className={
-                styles.cyber__reviews + " flex flex-wrap overflow-y-scroll"
-              }
-              style={{ height: 550 }}
-            >
-              <CyberCard author={author} review={review} />
-              <CyberCard author={author} review={review} />
-              <CyberCard author={author} review={review} />
-              <CyberCard author={author} review={review} />
-              <CyberCard author={author} review={review} />
-            </div>
+            {isError && <div>failed to load reviews</div>}
+            {isLoading && <div>loading...</div>}
+
+            {reviews && (
+              <div
+                className={
+                  styles.cyber__reviews + " flex flex-wrap overflow-y-scroll"
+                }
+                style={{ height: 550 }}
+              >
+                <CyberCard author={author} review={review} />
+                <CyberCard author={author} review={review} />
+                {reviews.map((review) => (
+                  <CyberCard
+                    key={review._id}
+                    author={review.title}
+                    review={review.description}
+                  />
+                ))}
+              </div>
+            )}
             <CyberAddReview />
           </div>
         </div>
