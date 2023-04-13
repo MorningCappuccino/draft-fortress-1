@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/nullstyle.css">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/iconsfont.css">
+        <link href="https://fonts.googleapis.com/css?family=Inter:500,600" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+        <title>DraftFortress</title>
+    </head>
+    <body>
+        <div class="wraper">
+            <div class="content__background">
+                <header class="header">
+                    <div class="header__container">
+                        <a class="header__logo">
+                            <img src="img/logo.svg">
+                        </a>
+                        <nav class="header__menu menu">
+                            <ul class="menu__list">
+                                <li class="menu__item ">
+                                    <a class="menu__link">Game info</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link">Media</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link">News</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__link">Leaderboards</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header__button">
+                            <button href="#" id="open_pop_up" class="button_login" type="submit" >login</button>
+                        </div>    
+                    </div>
+                </header>
+                <div class="login__popup"  id="pop_up">
+                        <div class="login">
+                            <div class="login__body" action="#" id="pop_up_body">
+                                <button class="login__close " id="pop_up_close" type="submit"><img src="img/Vector.svg"></button>
+                                    <div class="login__content">
+                                        <h1 class="login__title">Login</h1>
+                                        <form action="" class="login__input input">
+                                            <input class="input__email" type="email" placeholder="Email"  >
+                                            <input class="input__password" type="password" placeholder="Password">
+                                        </form>
+                                        <div class="login__choice">
+                                            <input class="login__checkbox" type="checkbox" >
+                                            <label class="login__remember"><a>Remember me</a></label>
+                                            <a class="login__forgot "><a>Forgot password?</a></a>
+                                        </div>
+                                        <div class="login__button">
+                                            <button class="button__dark popup__click" type="submit">Login</button>
+                                        </div>
+                                        <div class="login__account" id="register">Don’t have an account?<a href="" class="login__register">Register</a></div>
+                                    </div> 
+                                <div class="registration__content" id="register_up" >
+                                     <button class="login__close " id="register_close" type="submit"><img src="img/Vector.svg"></button>
+                                    <h1 class="registration__title">Registration</h1>
+                                    <div class="login__input input">
+                                        <input class="input__user" name="username" placeholder="Username"  >
+                                        <input class="input__email" type="email" placeholder="Email"  >
+                                        <input class="input__password" type="password" placeholder="Password">
+                                    </div>
+                                    <div class="login__choice">
+                                        <input class="login__checkbox" type="checkbox" >
+                                        <label class="login__remember"><a>Agree with terms & conditions</a></label>
+                            
+                                    </div>
+                                    <div class="login__button">
+                                        <button class="button__dark" type="submit">Register</button>
+                                    </div>
+                                    <div class="login__account">Already have an account?<a href="#popup#2" class="login__register popup__click">Login</a></div>
+                                </div>  
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/script2.js"></script>
+    </body>
+</html>   
