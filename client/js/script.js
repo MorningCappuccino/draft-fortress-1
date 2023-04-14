@@ -14,24 +14,7 @@ new Swiper('.swiper', {
     },
 });
 //---------------post------------------------------------------
-function f1() {
-  //1
-  const xhr = new XMLHttpRequest();
-
-  //2
-  xhr.open('GET','http://localhost:3000/entity');
-  //3
-  xhr.onload = function () {
-    console.log(xhr.status);
-    console.log(xhr.response);
-    const data = JSON.parse(xhr.response);
-    console.log(data);
-  }
-  //4
-  xhr.send();
-}
-f1();
-function f2() {
+function getReviews() {
   //1
   const xhr = new XMLHttpRequest();
   //2
@@ -43,20 +26,34 @@ function f2() {
     const data = JSON.parse(xhr.response);
     console.log(data);
 
-    const divElement = document.querySelector('.swiper__text');
+    const divElements = document.querySelectorAll('.swiper-slide');
 
-    let key;
+    console.log(divElements);
+    // let key;
+    // divElements[0].innerHTML +=  `<p class="swiper__text">${data[0].description}</p>
+    // <p class="swiper__sub-title" name="title">${data[0].title}</p>`;
+    // divElements[1].innerHTML +=  `<p class="swiper__text">${data[1].description}</p>
+    // <p class="swiper__sub-title" name="title">${data[1].title}</p>`;
+    // divElements[2].innerHTML +=  `<p class="swiper__text">${data[2].description}</p>
+    // <p class="swiper__sub-title" name="title">${data[2].title}</p>`;
 
-    for (key in data) {
-      divElement.innerHTML += 
-      `<p class="swiper__text">${data[key].description}</p>
-      <p class="swiper__sub-title" name="title">${data[key].title}</p>` 
+    // for (key in data) {
+    //   divElement.innerHTML += 
+    //   `<p class="swiper__text">${data[key].description}</p>
+    //   <p class="swiper__sub-title" name="title">${data[key].title}</p>` 
+    // }
+    let arr = data.slice(0,3);
+    console.log(arr);
+
+    for (let i = 0 ; i < 3; i++) {
+      divElements[i].innerHTML +=  `<p class="swiper__text">${data[i].description}</p>
+     <p class="swiper__sub-title" name="title">${data[i].title}</p>`;
     }
   }
   //4
   xhr.send();
 }
-  f2();
+getReviews();
 
 //работает----get---------------------------------------------------------------------
 

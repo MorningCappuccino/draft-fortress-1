@@ -11,8 +11,8 @@ closePopUp.addEventListener('click',()=> {
     popUp.classList.remove('active')
 }) 
 
-const openRegister = document.getElementById('register');
-const closeRegister = document.getElementById('register_close');
+const openRegister = document.getElementById('open_register');
+const closeRegister = document.getElementById('close_register');
 const register = document.getElementById('register_up');
 
 // openRegister = addEventListener('click', function(e) {
