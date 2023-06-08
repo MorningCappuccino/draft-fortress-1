@@ -1,11 +1,15 @@
 import Image from "next/image";
 
 export default function CyberCard({
+  id,
   author,
   review,
+  funcRemove,
 }: {
+  id: string;
   author: string;
   review: string;
+  funcRemove: Function;
 }) {
   return (
     <div
@@ -15,6 +19,7 @@ export default function CyberCard({
       <div className="flex justify-between mb-4">
         <Image src="/rec.svg" alt="rec" width={54} height={4}></Image>
         <span className="text-2xl">{author}</span>
+        <span onClick={() => funcRemove(id)}>remove</span>
       </div>
       <div className="text-sm">{review}</div>
     </div>
