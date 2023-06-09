@@ -19,7 +19,9 @@ export default function CyberCard({
       <div className="flex justify-between mb-4">
         <Image src="/rec.svg" alt="rec" width={54} height={4}></Image>
         <span className="text-2xl">{author}</span>
-        <span onClick={() => funcRemove(id)}>remove</span>
+        <span className="cursor-pointer" onClick={() => funcRemove(id)}>
+          remove
+        </span>
       </div>
       <div className="text-sm">{review}</div>
     </div>

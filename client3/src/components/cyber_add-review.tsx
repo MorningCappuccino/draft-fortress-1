@@ -1,5 +1,6 @@
 import { Review } from "@/types";
 import { fetcher, fetcherPost } from "@/utils/utils";
+import { useState } from "react";
 import useSWRMutation from "swr/mutation";
 
 async function sendRequest(url: string, { arg }) {
@@ -11,6 +12,8 @@ async function sendRequest(url: string, { arg }) {
 }
 
 export default function CyberAddReview() {
+  const [review, setReview] = useState("");
+  const [signature, setSignature] = useState("");
   // const { trigger } = useSWRMutation<Review, Error>("/entity", fetcherPost);
   // const { trigger } = useSWRMutation("/entity", fetcherPost);
   const { trigger } = useSWRMutation(
@@ -19,7 +22,7 @@ export default function CyberAddReview() {
   );
 
   const AddReview = () => {
-    trigger({ title: "test_3", description: "test_4" });
+    trigger({ title: signature, description: review });
   };
 
   return (
@@ -31,6 +34,7 @@ export default function CyberAddReview() {
         cols={44}
         rows={3}
         placeholder="Type our review..."
+        onChange={(ev) => setReview(ev.target.value)}
       ></textarea>
       <div className="flex flex-col justify-between items-end">
         <input
@@ -38,6 +42,7 @@ export default function CyberAddReview() {
           style={{ width: 330, lineHeight: "40px" }}
           placeholder="Signature..."
           type="text"
+          onChange={(ev) => setSignature(ev.target.value)}
         />
         <button
           className="text-aqua uppercase text-2xl bg-button bg-no-repeat"

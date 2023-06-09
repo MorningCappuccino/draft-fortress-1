@@ -13,8 +13,9 @@ Edgerunners — the pulsa ting anime set in the world of Cyberpunk
 the anime, as well as a host of new features and content to dig
 into.`;
 
-async function sendRequest(url: string, id: string) {
-  return fetch(url + `/${id}`, {
+// arg not args
+async function sendRequest(url: string, { arg }) {
+  return fetch(url + `/${arg.id}`, {
     method: "DELETE",
   });
 }
@@ -23,20 +24,19 @@ export default function Home() {
   const { reviews, isLoading, isError } = useReviews();
   const [id, setId] = useState<string>("");
 
+  // const { trigger } = useSWRMutation(
+  //   ["http://localhost:3000/entity", id],
+  //   ([url, id]) => sendRequest(url, id)
+  // );
+
   const { trigger } = useSWRMutation(
-    ["http://localhost:3000/entity", id],
-    ([url, id]) => sendRequest(url, id)
+    "http://localhost:3000/entity",
+    sendRequest
   );
 
-  const RemoveReview = (id: string): void => {
-    //return Review
-    // const upd =
-    console.log(id);
-    setId(id);
-    // trigger();
-    // reviews?.filter((item: Review) => item._id !== id);
-    // useReviews(upd)
-  };
+  async function RemoveReview(id: string) {
+    trigger({ id });
+  }
 
   return (
     <main>
